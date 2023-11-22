@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Título da Página</title>
+</head>
+
+<body id="body" class="">
+    <header class="">
+        <nav class="navbar bg-dark mb-5" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Controle</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Controle</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="row gx-3">
+            <!--Dashboards-->
+            <div class="col-xxl-3 col-lg-6 col-md-6">
+                <div class="card text-white mb-4 ">
+                    <div class="card-body dash-used">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="me-3">
+                                <div class="text-white">Licenças Disponiveis
+                                </div>
+                                <div class="fs-1 fw-bold dash-available-count">loading..</div>
+                                <div>
+                                    show more
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-6 col-md-6">
+                <div class="card text-white mb-4 dash-used">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="me-3">
+                                <div class="text-white">Licenças Em Uso
+                                </div>
+                                <div class="fs-1 fw-bold dash-used-count">Loading...</div>
+                                <div>
+                                    show more
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-6 col-md-6">
+                <div class="card text-white mb-4 dash-used">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="me-3">
+                                <div class="text-white">Licenças Temporaria
+                                </div>
+                                <div class="fs-1 fw-bold dash-temp-count">Loading...</div>
+                                <div>
+                                    Expira em dd/mm/aaaa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-6 col-md-6">
+                <div class="card text-white mb-4 dash-used">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="me-3">
+                                <div class="text-white">Licenças Expirada
+                                </div>
+                                <div class="fs-1 fw-bold dash-expired-count">Loading...</div>
+                                <div>
+                                    Expirado em dd/mm/aaaa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Dashboards-->
+        </section>
+        <section>
+            <div class="container-md flex flex-column" data-bs-theme="dark">
+                <div class="title-table text-center">
+                    <h5 class="card-title">Controle Licenças</h5>
+                    <p>Controle Pashal</p>
+                </div>
+                <div class="group-filter flex justify-content-between flex-row gap-1 mb-2 d-flex align-items-center">
+                    <div class="input-group ">
+                        <span class="input-group-text" id="basic-addon1">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                </path>
+                            </svg>
+                        </span>
+                        <input type="text" id="input-search" class="form-control" placeholder="Search"
+                            aria-label="input-group-search" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="select-list-table col-2">
+                        <div class="input-group ">
+                            <select name="" id="filterKey" class="form-select-md form-control">
+                                <option value="0" id="listAll" aria-selected="true" selected>Status - All</option>
+                                <option value="1" id="usedKey">Em Uso</option>
+                                <option value="2" id="availableKey">Disponível</option>
+                                <option value="3" id="tempKey">Temporário</option>
+                                <option value="4" id="expiredKey">Expirado</option>
+                            </select>
+                            <span class="input-group-text" id="basic-addon1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-filter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <div class="text-center ">
+                        <div class="table-container table-responsive ">
+                            <table class="table table-list table-striped table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Branch</th>
+                                        <th scope="col">Hostname</th>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Key</th>
+                                        <th scope="col">Version</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-list-tbody" class="list-tbody align">
+                                    <tr data-id="1">
+                                        <!-- Outras linhas da tabela -->
+                                    </tr>
+                                    <!-- Adicione mais linhas conforme necessário -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Details -->
+    <div class="modal fade" id="detailsModalToggle" aria-hidden="true" aria-labelledby="detailsModalToggleLabel"
+        data-bs-theme="dark">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="detailsModalToggleLabel">Informações das Licenças</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-editable">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Details -->
+
+    <!-- Modal Edit -->
+    <div class="modal fade" id="editModalToggle" aria-hidden="true" aria-labelledby="detailsModalToggleLabel"
+        data-bs-theme="dark">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editModalToggleLabel">Editar licenças</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success btn-save btn-dis" id="btn-save-edit">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ModalEdit -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dataFilter.js"></script>
+    <script src="/assets/js/dataLoader.js"></script>
+    <script src="/assets/js/modal.js"></script>
+    <script src="/assets/js/dataDisplay.js"></script>
+    <script src="/assets/js/dataEdit.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+</body>
+
+</html>
