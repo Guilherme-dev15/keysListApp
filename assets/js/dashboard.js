@@ -36,7 +36,7 @@ async function handleCountLicensesAvailable() {
 async function loadXLSXLibrary() {
     if (typeof XLSX === 'undefined') {
         const script = document.createElement('script');
-        script.src = '../data/zwcad.xlsx'; // Substitua pelo caminho real para a biblioteca XLSX
+        script.src = '../data/license.xlsx';
         script.async = true;
 
         const libraryLoaded = new Promise((resolve, reject) => {
