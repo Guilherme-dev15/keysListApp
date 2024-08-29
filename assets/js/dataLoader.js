@@ -3,6 +3,7 @@ async function loadAndProcessXLSXData() {
       console.error('XLSX library is not loaded.');
       throw new Error('XLSX library is not loaded.');
     }
+    
     try {
       const response = await fetch('data/license.xlsx');
       const data = await response.arrayBuffer();
