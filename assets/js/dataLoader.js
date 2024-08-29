@@ -4,7 +4,7 @@ async function loadAndProcessXLSXData() {
       throw new Error('XLSX library is not loaded.');
     }
     try {
-      const response = await fetch('../data/license.xlsx');
+      const response = await fetch('./assets/data/license.xlsx');
       const data = await response.arrayBuffer();
       const workbook = XLSX.read(data, { type: 'array' });
       const firstSpreadsheet = workbook.SheetNames[0];
